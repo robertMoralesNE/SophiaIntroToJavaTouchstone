@@ -1,0 +1,116 @@
+//Start with importing scanner utility
+import java.util.Scanner;
+//Then start the program
+public class ConversionCalculator {
+//The first thing to do is define the classes to be used later at the top.
+    //These are the temperature classes
+    private static final double convertedTemperatureClassInC1 = 0;
+    private static final double convertedTemperatureClassInC2 = 20;
+    private static final double convertedTemperatureClassInF1 = 32;
+    private static final double convertedTemperatureClassInF2 = 68;
+    //These are the distance classes
+    private static final double convertedDistanceClassInMet2 =5;
+    private static final double convertedDistanceClassInImp2 =3;
+    //Then open the scanner so that the menu can recieve user input
+    private static Scanner scanner = new Scanner(System.in);
+    //This starts the args and prints the menu to the screen
+    public static void main(String[] args) {
+        System.out.println("What do you want to convert?");
+        System.out.println("1. Temperature 2. Distance Or 3. Exit");
+        //Then use the integer input as the next integer
+        int tempOrDistanceChoiceOrGoodbye = scanner.nextInt();
+        //This is a simple switch menu, 1 is the first option to convert temperature
+        if (tempOrDistanceChoiceOrGoodbye == 1) {
+            calcTemperature();
+        }
+        //The second option is 2, to convert distance
+        else if (tempOrDistanceChoiceOrGoodbye == 2) {
+            calcDistance();
+        }
+        //The third option is 3, this closes the program
+        else if (tempOrDistanceChoiceOrGoodbye == 3) {
+            System.out.println("Goodbye");
+        }
+        //To handle imputer error an else is used to remind user the options.
+        else {
+            System.out.println("Error: Select between 1 - 3.");
+        }
+        //Close the scanner now as the program loops back to this menu
+        scanner.close();
+    }
+    //Then start the temperature calculator to define the method
+    private static void calcTemperature() {
+        //Print menu for temperature calculator with clear options
+        System.out.println("Enter the temperature you want to convert: ");
+        double temperatureInput = scanner.nextDouble();
+        System.out.println("Select 1. Fahrenheit to Celsius or 2. Celsius to Fahrenheit");
+        int temperatureScale = scanner.nextInt();
+        //If Fahrenheit to Celsius that opens the following
+        if (temperatureScale == 1) {
+            //Actual conversion calculation
+            double convertedTemperatureInC = (temperatureInput -32) / 1.8;
+            String temperatureClassInC;
+            //These are the class distinctions, using as few lines as possible
+            if (convertedTemperatureInC < convertedTemperatureClassInC1) {
+                temperatureClassInC = "Cold";
+            }
+            else if (convertedTemperatureInC > convertedTemperatureClassInC2) {
+                temperatureClassInC = "Hot";
+            }
+            else {
+                temperatureClassInC = "Comfortable";
+            }
+            //Then print out the conversion output and class adjective, either "Cold", "Hot", or "Comfoertable"
+            System.out.println ("It is " + convertedTemperatureInC + " degrees. That is " + temperatureClassInC);
+        }
+        //This is exactly the same as the previous section but converts Celsius to Fahrenheit
+        else if (temperatureScale == 2) {
+            double convertedTemperatureInF = (temperatureInput * 1.8) + 32;
+            String temperatureClassInF;
+            if (convertedTemperatureInF < convertedTemperatureClassInF1) {
+                temperatureClassInF = "Cold";
+            } else if (convertedTemperatureInF > convertedTemperatureClassInF2) {
+                temperatureClassInF = "Hot";
+            } else {
+                temperatureClassInF = "Comfortable";
+            }
+            System.out.println("It is " + convertedTemperatureInF + " degrees. That is " + temperatureClassInF);
+        }
+        else {
+            System.out.println("Selection not valid. Select 1. Fahrenheit or 2. Celsius");
+        }
+    }
+    //If distance is selected, then different calculations are used and different classes, only "Close", and "Far"
+    public static void calcDistance() {
+        //Starts with asking for distance and which scale user wants to convert between
+        System.out.println("Enter the distance you want to convert: ");
+        double distanceInput = scanner.nextDouble();
+        System.out.println("Select 1. Imperial or 2. Metric");
+        int distanceScale = scanner.nextInt();
+        //The following is exactly the same as the temperature calculators, with different method and classes
+        if (distanceScale == 1) {
+            double convertedDistanceInMet = distanceInput * 1.60934;
+            String distanceClassInMet;
+            if (convertedDistanceInMet < convertedDistanceClassInMet2) {
+                distanceClassInMet = "Close";
+            }
+            else {
+                distanceClassInMet = "Far";
+            }
+            System.out.println ("It is " + convertedDistanceInMet + " kilometers. That is " + distanceClassInMet);
+        }
+        else if (distanceScale == 2) {
+            double convertedDistanceInImp = distanceInput * 0.621371;
+            String distanceClassInImp;
+            if (convertedDistanceInImp < convertedDistanceClassInImp2) {
+                distanceClassInImp = "Close";
+            } else {
+                distanceClassInImp = "Far";
+            }
+            System.out.println("It is " + convertedDistanceInImp + " miles. That is " + distanceClassInImp);
+        }
+        else {
+            System.out.println("Selection not valid. Select 1. Imperial or 2. Metric");
+        }
+    }
+}
