@@ -1,0 +1,400 @@
+/* Color palette for Bloom Valley Nursery
+ - Canopy Green: #014038
+ - Meadow Mist: #96BAA0
+ - Sky Bloom: #BDD4DA
+ - Sunlit Petal: #F0C06D
+ - Cloudy Gray: #F7F7F7
+*/
+/* Body style for layout and typography */
+body {
+font-family: Calibri, Arial, sans-serif;
+font-size: 16px;
+background-color: #F7F7F7;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+/* Header style, use sticky menu for ease of use with mobile and desktop*/
+.header {
+position: sticky;
+top: 0;
+background-color: #96BAA0;
+color: #014038;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+/* Logo style*/
+.logo {
+height: 50px; /* Height stays consistent for mobile and desktop*/
+}
+.header-text {
+font-family: Arial, sans-serif;
+font-size: 30px;
+font-weight: bold;
+}
+
+/* Cart counter in header */
+.cart-counter {
+background-color: #014038;
+color: #F0C06D;
+padding: 8px 15px;
+border-radius: 20px;
+font-weight: bold;
+margin-right: 10px;
+}
+
+.cart-counter::before {
+content: "Cart: ";
+}
+
+.cart-counter::after {
+content: counter(cart-items);
+}
+
+/* Dropdown stays consistent for mobile and desktop with relative*/
+.dropdown {
+position: relative;
+}
+/* Dropdown style that allows click dropdown menu*/
+.dropbtn {
+background-color: #014038;
+color: white;
+}
+/* Dropdown menu content, stays hidden which is useful for mobile*/
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+}
+/* Individual menu links - navigation items within dropdown, keeps size large enough for clicks and block makes entire area clickable which is very useful on mobile*/
+.dropdown-content a {
+color: #014038;
+padding: 12px 16px;
+display: block;
+}
+/* Dropdown menu reveals with hover effect*/
+.dropdown:hover .dropdown-content {
+display: block;
+}
+/* Main content style, flex is used for readability of mobile and desktop screen sizes*/
+.content {
+flex: 1;
+margin: 40px auto;
+padding: 40px;
+counter-reset: cart-items;
+}
+/* Large headings use correct font and Canopy green*/
+.content h1 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 25px;
+color: #014038;
+}
+/* 2nd largest heading, using meadow mist for veriety*/
+.content h2 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 25px;
+color: #00231C;
+}
+/* 3rd largest heading, uses sunlit petal fro veriety*/
+.content h3 {
+font-family: Comfortaa;
+font-size: 15px;
+color: #00231C;
+}
+/* Body text, large line height for mobile readability*/
+.content p {
+font-family: Calibri;
+font-size: 16px;
+line-height: 1.6;
+}
+
+/* Gallery grid, use css to make 2 by grid, made into flexible grid*/
+.gallery {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+/* Gallery item container */
+.gallery-item {
+position: relative;
+background-color: white;
+border-radius: 10px;
+padding: 15px;
+box-shadow: 0 4px 8px rgba(1, 64, 56, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(1, 64, 56, 0.2);
+}
+
+/* Gallery images auto scale to keep usable on mobile and desktop size screens*/
+.gallery-item img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+
+/* Product info */
+.product-info {
+text-align: center;
+}
+
+.product-name {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 18px;
+color: #014038;
+margin-bottom: 5px;
+}
+
+.product-price {
+font-family: Calibri;
+font-size: 16px;
+color: #96BAA0;
+margin-bottom: 15px;
+}
+
+/* Hide the actual checkbox */
+.add-to-cart-checkbox {
+display: none;
+}
+
+/* Add to cart button styling */
+.add-to-cart-btn {
+display: inline-block;
+background-color: #F0C06D;
+color: #014038;
+padding: 10px 20px;
+border-radius: 25px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+transition: all 0.3s ease;
+border: 2px solid transparent;
+}
+
+.add-to-cart-btn:hover {
+background-color: #014038;
+color: #F0C06D;
+border-color: #F0C06D;
+}
+
+/* When item is added to cart (checkbox is checked) */
+.add-to-cart-checkbox:checked + .add-to-cart-btn {
+background-color: #96BAA0;
+color: white;
+}
+
+.add-to-cart-checkbox:checked + .add-to-cart-btn::before {
+content: "✓ ";
+}
+
+.add-to-cart-checkbox:checked + .add-to-cart-btn::after {
+content: " Added!";
+}
+
+/* Counter increment for each checked item */
+.add-to-cart-checkbox:checked {
+counter-increment: cart-items;
+}
+
+/* Added to cart visual feedback */
+.add-to-cart-checkbox:checked ~ .product-info::after {
+content: "✓ In Cart";
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: #96BAA0;
+color: white;
+padding: 5px 10px;
+border-radius: 15px;
+font-size: 12px;
+font-weight: bold;
+}
+
+/* Cart action buttons */
+.cart-actions {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.cart-actions button {
+background-color: #014038;
+color: #F0C06D;
+padding: 10px 20px;
+border: none;
+border-radius: 25px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+cursor: pointer;
+margin: 0 10px;
+transition: all 0.3s ease;
+}
+
+.cart-actions button:hover {
+background-color: #96BAA0;
+color: white;
+}
+
+/* Sales and Events specific styling */
+.sales-events-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+
+.event-item {
+display: flex;
+background-color: white;
+border-radius: 15px;
+padding: 20px;
+box-shadow: 0 6px 12px rgba(1, 64, 56, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+align-items: center;
+gap: 20px;
+}
+
+.event-item:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(1, 64, 56, 0.15);
+}
+
+.event-item img {
+width: 120px;
+height: 120px;
+object-fit: cover;
+border-radius: 10px;
+flex-shrink: 0;
+}
+
+.event-info {
+flex: 1;
+}
+
+.event-title {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 20px;
+color: #014038;
+margin-bottom: 8px;
+}
+
+.event-date {
+font-family: Calibri;
+font-size: 14px;
+color: #96BAA0;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+.event-description {
+font-family: Calibri;
+font-size: 16px;
+line-height: 1.5;
+color: #333;
+margin-bottom: 10px;
+}
+
+.event-price {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 18px;
+color: #F0C06D;
+}
+
+/* Event type badges */
+.event-badge {
+display: inline-block;
+padding: 4px 12px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.sale-badge {
+background-color: #F0C06D;
+color: #014038;
+}
+
+.current-event-badge {
+background-color: #96BAA0;
+color: white;
+}
+
+.past-event-badge {
+background-color: #BDD4DA;
+color: #014038;
+}
+
+/* Newsletter section in footer */
+.newsletter-section {
+background-color: #96BAA0;
+padding: 20px;
+margin-top: 20px;
+text-align: center;
+border-radius: 10px;
+}
+
+.newsletter-section h3 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 18px;
+color: #014038;
+margin-bottom: 15px;
+}
+
+.newsletter-section form {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.newsletter-section input[type="email"] {
+padding: 10px;
+border: none;
+border-radius: 20px;
+font-family: Calibri;
+font-size: 14px;
+flex: 1;
+min-width: 200px;
+max-width: 300px;
+}
+
+.newsletter-section button {
+background-color: #014038;
+color: #F0C06D;
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.newsletter-section button:hover {
+background-color: #F0C06D;
+color: #014038;
+}
+
+/* Feedback form styling */
+.feedback-section {
+background-color: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(1, 64, 56, 0.1);
+margin-top: 40px
+}
