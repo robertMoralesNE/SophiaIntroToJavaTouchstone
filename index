@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloom Valley Nursery - Home</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header">
+<img src="Client1_LogoPalette2_F0C06D.png" alt="Logo" class="logo">
+<div class="header-text">Bloom Valley Nursery</div>
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About Us</a>
+<a href="sales.html">Sales and Events</a>
+</div>
+</div>
+</div>
+<div class="content">
+<h1>Welcome!</h1>
+<h2>We are here to serve the community!</h2>
+<p>We have 5 sections of our nursery dedicated to making your home more green and beautiful!</p>
+<img src="Client1_PottingSoil.png" width="100%" alt="Potting Soil">
+</div>
+<footer>
+<p>&copy; 2025 Bloom Valley Nursery. All rights reserved.</p>
+<div class="newsletter-section">
+<h3>Subscribe to Our Newsletter</h3>
+<form id="newsletter-form" novalidate>
+<input type="email" id="newsletter-email" placeholder="Enter your email">
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
