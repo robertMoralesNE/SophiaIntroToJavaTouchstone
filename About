@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloom Valley Nursery - About Us</title>
+<style>
+/* Color palette for Bloom Valley Nursery
+ - Canopy Green: #014038
+ - Meadow Mist: #96BAA0
+ - Sky Bloom: #BDD4DA
+ - Sunlit Petal: #F0C06D
+ - Cloudy Gray: #F7F7F7
+ - Font: Detritus Green: #00231C
+*/
+body {
+font-family: Calibri, Arial, sans-serif;
+font-size: 16px;
+background-color: #F7F7F7;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.header {
+position: sticky;
+top: 0;
+background-color: #96BAA0;
+color: #014038;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+/* Logo style*/
+.logo {
+height: 50px;
+}
+.header-text {
+font-family: Arial, sans-serif;
+font-size: 30px;
+font-weight: bold;
+}
+
+.dropdown {
+position: relative;
+}
+
+.dropbtn {
+background-color: #014038;
+color: white;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+}
+
+.dropdown-content a {
+color: #014038;
+padding: 12px 16px;
+display: block;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.content {
+flex: 1;
+margin: 40px auto;
+padding: 40px;
+}
+
+.content h1 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 25px;
+color: #014038;
+}
+
+.content h2 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 25px;
+color: #00231C;
+}
+
+.content h3 {
+font-family: Comfortaa;
+font-size: 15px;
+color: #00231C;
+}
+
+.content p {
+font-family: Calibri;
+font-size: 16px;
+line-height: 1.6;
+}
+
+.newsletter-section {
+background-color: #96BAA0;
+padding: 20px;
+margin-top: 20px;
+text-align: center;
+border-radius: 10px;
+}
+
+.newsletter-section h3 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 18px;
+color: #00231C;
+margin-bottom: 15px;
+}
+
+.newsletter-section form {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.newsletter-section input[type="email"] {
+padding: 10px;
+border: none;
+border-radius: 20px;
+font-family: Calibri;
+font-size: 14px;
+flex: 1;
+min-width: 200px;
+max-width: 300px;
+}
+
+.newsletter-section button {
+background-color: #014038;
+color: #F0C06D;
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.newsletter-section button:hover {
+background-color: #F0C06D;
+color: #014038;
+}
+
+/* Feedback form styling */
+.feedback-section {
+background-color: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(1, 64, 56, 0.1);
+margin-top: 40px;
+}
+
+.feedback-section h2 {
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 25px;
+color: #00231C;
+margin-bottom: 20px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+font-family: Arial, sans-serif;
+font-weight: bold;
+color: #00231C;
+margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 2px solid #96BAA0;
+border-radius: 8px;
+font-family: Calibri;
+font-size: 16px;
+box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+border-color: #014038;
+outline: none;
+}
+
+.feedback-section button[type="submit"] {
+background-color: #014038;
+color: #F0C06D;
+padding: 12px 30px;
+border: none;
+border-radius: 25px;
+font-family: Arial, sans-serif;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+font-size: 16px;
+}
+
+.feedback-section button[type="submit"]:hover {
+background-color: #96BAA0;
+color: white;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<img src="Client1_LogoPalette2_F0C06D.png" alt="Logo" class="logo">
+<div class="header-text">Bloom Valley Nursery</div>
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About Us</a>
+<a href="sales.html">Sales and Events</a>
+</div>
+</div>
+</div>
+<div class="content">
+<h1>We grow with you!</h1>
+<p>Our nursery started with a dream of building our local community one tree at a time. We grow when you grow, and so does our family.</p>
+<h3>Founder: Greg Johnson</h3>
+<p>Started in 1982. Greg founded Bloom Valley Nursery with a desire to share his love of plants with the community.</p>
+<h3>Owner: Merv Griffie</h3>
+<p>Working in the industry for 30+ years, Merv is passionate about getting our community greener every day.</p>
+<h3>General Manager: Todd Dodd</h3>
+<p>Born and raised in the community. Many of you know him from our many community activities.</p>
+<img src="Client1_LogoPalette2_F0C06D.png" width="100%" alt="Bloom Valley Nursery Logo">
+<div class="feedback-section">
+<h2>Contact Us</h2>
+<form id="feedback-form" novalidate>
+<div class="form-group">
+<label for="feedback-name">Name:</label>
+<input type="text" id="feedback-name" name="name">
+</div>
+<div class="form-group">
+<label for="feedback-email">Email:</label>
+<input type="email" id="feedback-email" name="email">
+</div>
+<div class="form-group">
+<label for="feedback-phone">Phone Number (optional):</label>
+<input type="tel" id="feedback-phone" name="phone">
+</div>
+<div class="form-group">
+<label for="feedback-message">Issue/Order Information:</label>
+<textarea id="feedback-message" name="message" rows="5"></textarea>
+</div>
+<button type="submit">Submit Feedback</button>
+</form>
+</div>
+</div>
+<footer>
+<p>&copy; 2025 Bloom Valley Nursery. All rights reserved.</p>
+<div class="newsletter-section">
+<h3>Subscribe to Our Newsletter</h3>
+<form id="newsletter-form" novalidate>
+<input type="email" id="newsletter-email" placeholder="Enter your email">
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</footer>
+
+<script>
+//STORAGE ADAPTER
+(function () {
+    function isStorageAvailable(type) {
+        try {
+            const storage = window[type];
+            const testKey = '__storage_test__';
+            storage.setItem(testKey, '1');
+            storage.removeItem(testKey);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    //Fallback storage object
+    const fallback = {
+        _session: {},
+        _local: {},
+        sessionSet(k, v) { this._session[k] = String(v); },
+        sessionGet(k) { return Object.prototype.hasOwnProperty.call(this._session, k) ? this._session[k] : null; },
+        sessionRemove(k) { delete this._session[k]; },
+        sessionClear() { this._session = {}; },
+        localSet(k, v) { this._local[k] = String(v); },
+        localGet(k) { return Object.prototype.hasOwnProperty.call(this._local, k) ? this._local[k] : null; },
+        localRemove(k) { delete this._local[k]; },
+    };
+
+    const useSession = isStorageAvailable('sessionStorage') ? window.sessionStorage : null;
+    const useLocal   = isStorageAvailable('localStorage')   ? window.localStorage   : null;
+
+    window.cartStorage = {
+        // Session
+        setSessionItem(key, value) { useSession ? useSession.setItem(key, value) : fallback.sessionSet(key, value); },
+        getSessionItem(key)        { return useSession ? useSession.getItem(key) : fallback.sessionGet(key); },
+        removeSessionItem(key)     { useSession ? useSession.removeItem(key) : fallback.sessionRemove(key); },
+        clearSession()             { useSession ? useSession.clear() : fallback.sessionClear(); },
+
+        // Local
+        setLocalItem(key, value)   { useLocal ? useLocal.setItem(key, value) : fallback.localSet(key, value); },
+        getLocalItem(key)          { return useLocal ? useLocal.getItem(key) : fallback.localGet(key); },
+        removeLocalItem(key)       { useLocal ? useLocal.removeItem(key) : fallback.localRemove(key); },
+
+        hasRealSession: !!useSession,
+        hasRealLocal: !!useLocal,
+    };
+})();
+
+document.addEventListener('DOMContentLoaded', function () {
+    //CUSTOM ALERT
+    function showCustomAlert(message) {
+        const alertDiv = document.createElement('div');
+
+        if (message.includes('\n')) {
+            alertDiv.innerHTML = message.replace(/\n/g, '<br>');
+        } else {
+            alertDiv.textContent = message;
+        }
+
+        alertDiv.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #96BAA0;
+            color: #014038;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 400px;
+            overflow-y: auto;
+            text-align: center;
+            border: 2px solid #014038;
+            white-space: pre-line;
+        `;
+
+        document.body.appendChild(alertDiv);
+
+        const timeout = message.includes('Cart Contents') ? 5000 : 3000;
+        setTimeout(function () {
+            if (document.body.contains(alertDiv)) {
+                document.body.removeChild(alertDiv);
+            }
+        }, timeout);
+    }
+
+    function saveCustomerToLocal(customerData) {
+        cartStorage.setLocalItem('customerData', JSON.stringify(customerData));
+    }
+
+    //NEWSLETTER
+    const newsletterForm = document.getElementById('newsletter-form');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const emailInput = document.getElementById('newsletter-email');
+            const email = emailInput.value.trim();
+
+            if (email === '') {
+                showCustomAlert('Please enter an email address.');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                showCustomAlert('Please include a "@" in the email address.');
+                return;
+            }
+
+            const emailParts = email.split('@');
+            if (emailParts.length !== 2 || emailParts[0] === '' || emailParts[1] === '') {
+                showCustomAlert('Please enter a valid email address.');
+                return;
+            }
+
+            showCustomAlert('You are now subscribed to our newsletter with email: ' + email);
+            emailInput.value = '';
+        });
+    }
+
+    //FEEDBACK FORM
+    const feedbackForm = document.getElementById('feedback-form');
+
+    if (feedbackForm) {
+        function loadCustomerData() {
+            const customerData = cartStorage.getLocalItem('customerData');
+            if (customerData) {
+                const data = JSON.parse(customerData);
+                const nameEl = document.getElementById('feedback-name');
+                const emailEl = document.getElementById('feedback-email');
+                const phoneEl = document.getElementById('feedback-phone');
+
+                if (nameEl) nameEl.value = data.name || '';
+                if (emailEl) emailEl.value = data.email || '';
+                if (phoneEl) phoneEl.value = data.phone || '';
+
+            }
+        }
+
+        loadCustomerData();
+
+        feedbackForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('feedback-name').value.trim();
+            const email = document.getElementById('feedback-email').value.trim();
+            const phone = document.getElementById('feedback-phone').value.trim();
+            const message = document.getElementById('feedback-message').value.trim();
+
+            if (name === '') {
+                showCustomAlert('Please enter your name.');
+                return;
+            }
+
+            if (email === '') {
+                showCustomAlert('Please enter your email address.');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                showCustomAlert('Please include a "@" in the email address.');
+                return;
+            }
+
+            const emailParts = email.split('@');
+            if (emailParts.length !== 2 || emailParts[0] === '' || emailParts[1] === '') {
+                showCustomAlert('Please enter a valid email address.');
+                return;
+            }
+
+            if (message === '') {
+                showCustomAlert('Please enter your issue/order information.');
+                return;
+            }
+
+            const customerData = {
+                name: name,
+                email: email,
+                phone: phone,
+                lastMessage: message,
+                timestamp: new Date().toISOString()
+            };
+
+            saveCustomerToLocal(customerData);
+
+            showCustomAlert(
+                'Thank you for your message, ' +
+                name +
+                '! We will get back to you soon. Your information has been saved for future orders.'
+            );
+
+            document.getElementById('feedback-message').value = '';
+        });
+    }
+});
+</script>
+</body>
+</html>
