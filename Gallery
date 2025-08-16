@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bloom Valley Nursery - Gallery</title>
+<style>
+/*THEME*/
+body{font-family:Calibri,Arial,sans-serif;font-size:16px;background:#F7F7F7;min-height:100vh;display:flex;flex-direction:column}
+.header{position:sticky;top:0;background:#96BAA0;color:#014038;display:flex;justify-content:space-between;align-items:center;z-index:100;padding:8px 12px}
+.logo{height:50px}
+.header-text{font-family:Arial,sans-serif;font-size:30px;font-weight:bold}
+.dropdown{position:relative}
+.dropbtn{background:#014038;color:#fff;padding:8px 14px;border-radius:8px;border:0;cursor:pointer}
+.dropdown-content{display:none;position:absolute;right:0;background:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.15);overflow:hidden}
+.dropdown-content a{color:#014038;padding:12px 16px;display:block;text-decoration:none}
+.dropdown:hover .dropdown-content{display:block}
+.content{flex:1;margin:40px auto;padding:40px}
+.content h1{font-family:Arial,sans-serif;font-weight:bold;font-size:25px;color:#014038}
+.content h2{font-family:Arial,sans-serif;font-weight:bold;font-size:25px;color:#96BAA0}
+.content h3{font-family:Comfortaa;font-size:15px;color:#F0C06D}
+.content p{font-family:Calibri;font-size:16px;line-height:1.6}
+
+/*GALLERY*/
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.gallery-item{position:relative;background:#fff;border-radius:10px;padding:15px;box-shadow:0 4px 8px rgba(1,64,56,.1);transition:transform .3s,box-shadow .3s}
+.gallery-item:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(1,64,56,.2)}
+.gallery-item img{width:100%;height:auto;border-radius:8px;margin-bottom:10px}
+.product-info{text-align:center}
+.product-name{font-family:Arial,sans-serif;font-weight:bold;font-size:18px;color:#014038;margin-bottom:5px}
+.product-price{font-family:Calibri;font-size:16px;color:#96BAA0;margin-bottom:15px}
+
+.add-to-cart-btn{display:inline-block;background:#F0C06D;color:#014038;padding:10px 20px;border-radius:25px;font-family:Arial,sans-serif;font-weight:bold;text-align:center;cursor:pointer;transition:all .3s;border:2px solid transparent}
+.add-to-cart-btn:hover{background:#014038;color:#F0C06D;border-color:#F0C06D}
+
+.cart-actions{text-align:center;margin-bottom:30px}
+.cart-actions button{background:#014038;color:#F0C06D;padding:10px 20px;border:none;border-radius:25px;font-family:Arial,sans-serif;font-weight:bold;cursor:pointer;margin:0 10px;transition:all .3s}
+.cart-actions button:hover{background:#96BAA0;color:#fff}
+
+.newsletter-section{background:#96BAA0;padding:20px;margin-top:20px;text-align:center;border-radius:10px}
+.newsletter-section h3{font-family:Arial,sans-serif;font-weight:bold;font-size:18px;color:#014038;margin-bottom:15px}
+.newsletter-section form{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+.newsletter-section input[type="email"]{padding:10px;border:none;border-radius:20px;font-family:Calibri;font-size:14px;flex:1;min-width:200px;max-width:300px}
+.newsletter-section button{background:#014038;color:#F0C06D;padding:10px 20px;border:none;border-radius:20px;font-family:Arial,sans-serif;font-weight:bold;cursor:pointer;transition:all .3s}
+.newsletter-section button:hover{background:#F0C06D;color:#014038}
+</style>
+</head>
+<body>
+  <div class="header">
+    <img src="Client1_LogoPalette2_F0C06D.png" alt="Logo" class="logo" />
+    <div class="header-text">Bloom Valley Nursery</div>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="sales.html">Sales and Events</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Gallery</h1>
+    <p>A wonderful gallery of our products.</p>
+
+    <div class="cart-actions">
+      <button id="view-cart-btn">View Cart</button>
+      <button id="clear-cart-btn">Clear Cart</button>
+      <button id="process-order-btn">Process Order</button>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="Client1_AloePlant.png" alt="Aloe Plant for sale" />
+        <div class="product-info">
+          <div class="product-name">Aloe Plant</div>
+          <div class="product-price">$19.99</div>
+          <button class="add-to-cart-btn" data-id="aloe" data-name="Aloe Plant" data-price="19.99">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Client1_AppleTree.png" alt="Apple Tree for sale" />
+        <div class="product-info">
+          <div class="product-name">Apple Tree</div>
+          <div class="product-price">$1,009.99</div>
+          <button class="add-to-cart-btn" data-id="apple" data-name="Apple Tree" data-price="1009.99">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Client1_BirchTree.png" alt="Birch Tree for sale" />
+        <div class="product-info">
+          <div class="product-name">Birch Tree</div>
+          <div class="product-price">$1,035.99</div>
+          <button class="add-to-cart-btn" data-id="birch" data-name="Birch Tree" data-price="1035.99">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Client1_MapleTree.png" alt="Maple Tree for sale" />
+        <div class="product-info">
+          <div class="product-name">Maple Tree</div>
+          <div class="product-price">$1,455.99</div>
+          <button class="add-to-cart-btn" data-id="maple" data-name="Maple Tree" data-price="1455.99">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Bloom Valley Nursery. All rights reserved.</p>
+    <div class="newsletter-section">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form id="newsletter-form" novalidate>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+<script>
+/*STORAGE*/
+(function () {
+  function isStorageAvailable(type) {
+    try {
+      const storage = window[type];
+      const testKey = '__storage_test__';
+      storage.setItem(testKey, '1');
+      storage.removeItem(testKey);
+      return true;
+    } catch { return false; }
+  }
+
+  const fallback = {
+    _session:{}, _local:{},
+    sessionSet(k,v){ this._session[k] = String(v); },
+    sessionGet(k){ return Object.prototype.hasOwnProperty.call(this._session,k) ? this._session[k] : null; },
+    sessionRemove(k){ delete this._session[k]; },
+    sessionClear(){ this._session = {}; },
+    localSet(k,v){ this._local[k] = String(v); },
+    localGet(k){ return Object.prototype.hasOwnProperty.call(this._local,k) ? this._local[k] : null; },
+    localRemove(k){ delete this._local[k]; },
+  };
+
+  const useSession = isStorageAvailable('sessionStorage') ? window.sessionStorage : null;
+  const useLocal   = isStorageAvailable('localStorage')   ? window.localStorage   : null;
+
+  window.cartStorage = {
+    setSessionItem(key,value){ useSession ? useSession.setItem(key,value) : fallback.sessionSet(key,value); },
+    getSessionItem(key){ return useSession ? useSession.getItem(key) : fallback.sessionGet(key); },
+    removeSessionItem(key){ useSession ? useSession.removeItem(key) : fallback.sessionRemove(key); },
+    clearSession(){ useSession ? useSession.clear() : fallback.sessionClear(); },
+    setLocalItem(key,value){ useLocal ? useLocal.setItem(key,value) : fallback.localSet(key,value); },
+    getLocalItem(key){ return useLocal ? useLocal.getItem(key) : fallback.localGet(key); },
+    removeLocalItem(key){ useLocal ? useLocal.removeItem(key) : fallback.localRemove(key); },
+    hasRealSession: !!useSession, hasRealLocal: !!useLocal,
+  };
+
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'cartItems') document.dispatchEvent(new CustomEvent('cart:externalUpdate'));
+  });
+})();
+
+/* MAIN */
+document.addEventListener('DOMContentLoaded', () => {
+
+  const fmtUSD = (n) => Number(n).toLocaleString(undefined, { style:'currency', currency:'USD' });
+
+  function showCustomAlert(message) {
+    const alertDiv = document.createElement('div');
+    alertDiv.innerHTML = message.includes('\n') ? message.replace(/\n/g,'<br>') : message;
+    alertDiv.style.cssText = `
+      position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+      background:#96BAA0;color:#014038;padding:20px 30px;border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);font-family:Arial,sans-serif;font-weight:bold;
+      font-size:16px;z-index:1000;max-width:520px;max-height:60vh;overflow-y:auto;
+      text-align:center;border:2px solid #014038;white-space:pre-line;
+    `;
+    document.body.appendChild(alertDiv);
+    setTimeout(() => { if (document.body.contains(alertDiv)) document.body.removeChild(alertDiv); },
+      message.includes('Cart Contents') ? 6000 : 3000
+    );
+  }
+
+  /*CART HELP*/
+  const CART_KEY = 'cartItems';
+
+  function getRawCart() {
+    const raw = cartStorage.getSessionItem(CART_KEY);
+    try { return raw ? JSON.parse(raw) : {}; }
+    catch { return {}; }
+  }
+
+  function normalizeCart(cartObj) {
+    const normalized = {};
+    let changed = false;
+
+    for (const id of Object.keys(cartObj || {})) {
+      const item = cartObj[id] ?? {};
+      let name = (item.name ?? '').toString().trim();
+      let price = typeof item.price === 'number' ? item.price : parseFloat(item.price);
+      let quantity = Number.isFinite(Number(item.quantity)) ? Number(item.quantity) : 1;
+      if (!Number.isFinite(price)) {
+        const btn = document.querySelector(`.add-to-cart-btn[data-id="${CSS.escape(id)}"]`);
+        if (btn) price = parseFloat(btn.getAttribute('data-price'));
+      }
+
+      if (!name && id) {
+        const btn = document.querySelector(`.add-to-cart-btn[data-id="${CSS.escape(id)}"]`);
+        if (btn) name = btn.getAttribute('data-name') || '';
+      }
+      if (!Number.isFinite(price)) price = 0;
+      if (!Number.isFinite(quantity) || quantity < 1) quantity = 1;
+
+      normalized[id] = { name, price, quantity };
+
+      if (!item || item.name !== name || Number(item.price) !== price || Number(item.quantity) !== quantity) {
+        changed = true;
+      }
+    }
+    return { normalized, changed };
+  }
+
+  function getCart() {
+    const raw = getRawCart();
+    const { normalized, changed } = normalizeCart(raw);
+    if (changed) saveCart(normalized);
+    return normalized;
+  }
+
+  function saveCart(cartObj) {
+    cartStorage.setSessionItem(CART_KEY, JSON.stringify(cartObj || {}));
+    document.dispatchEvent(new CustomEvent('cart:updated'));
+  }
+
+  function clearCart() {
+    cartStorage.removeSessionItem(CART_KEY);
+    document.dispatchEvent(new CustomEvent('cart:updated'));
+  }
+
+  function cartSummary(cartObj) {
+    const ids = Object.keys(cartObj);
+    let total = 0, totalQty = 0;
+    const lines = ids.map(id => {
+      const { name, price, quantity } = cartObj[id];
+      const unit = Number(price);
+      const qty  = Number(quantity);
+      const line = unit * qty;
+      total += line;
+      totalQty += qty;
+      return `${name} — ${fmtUSD(unit)} × ${qty} = ${fmtUSD(line)}`;
+    });
+    return { lines, total, totalQty };
+  }
+
+  /*NEWSLETTER*/
+  const newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = (document.getElementById('newsletter-email').value || '').trim();
+      if (!email) return showCustomAlert('Please enter an email address.');
+      if (!email.includes('@')) return showCustomAlert('Please include a "@" in the email address.');
+      const parts = email.split('@');
+      if (parts.length !== 2 || !parts[0] || !parts[1]) return showCustomAlert('Please enter a valid email address.');
+      showCustomAlert('You are now subscribed to our newsletter with email: ' + email);
+      document.getElementById('newsletter-email').value = '';
+    });
+  }
+
+  /*ADD TO CART*/
+  document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id    = btn.getAttribute('data-id');
+      const name  = btn.getAttribute('data-name');
+      const price = parseFloat(btn.getAttribute('data-price'));
+
+      if (!id || !name || !Number.isFinite(price)) {
+        return showCustomAlert('Unable to add item – missing data.');
+      }
+
+      const cart = getCart();
+      if (cart[id]) cart[id].quantity += 1;
+      else cart[id] = { name, price, quantity: 1 };
+
+      saveCart(cart);
+      showCustomAlert('Item added to cart!');
+    });
+  });
+
+  /*VIEW CART*/
+  const viewCartBtn = document.getElementById('view-cart-btn');
+  if (viewCartBtn) {
+    viewCartBtn.addEventListener('click', () => {
+      const cart = getCart();
+      const keys = Object.keys(cart);
+      if (keys.length === 0) return showCustomAlert('Your cart is empty');
+
+      const { lines, total, totalQty } = cartSummary(cart);
+      const msg =
+        'Cart Contents:\n\n' +
+        lines.join('\n') +
+        `\n\nItems: ${totalQty}\nTotal: ${fmtUSD(total)}`;
+      showCustomAlert(msg);
+    });
+  }
+
+  /*CLEAR CART*/
+  const clearCartBtn = document.getElementById('clear-cart-btn');
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener('click', () => {
+      const cart = getCart();
+      if (Object.keys(cart).length === 0) return showCustomAlert('No items to clear');
+      clearCart();
+      showCustomAlert('Cart has been cleared!');
+    });
+  }
+
+  /*PROCESS ORDER*/
+  const processOrderBtn = document.getElementById('process-order-btn');
+  if (processOrderBtn) {
+    processOrderBtn.addEventListener('click', () => {
+      const cart = getCart();
+      if (Object.keys(cart).length === 0) return showCustomAlert('No items in cart');
+
+      const { totalQty, total } = cartSummary(cart);
+      showCustomAlert(`Order processed successfully!\nItems: ${totalQty}\nCharged: ${fmtUSD(total)}`);
+      clearCart();
+    });
+  }
+});
+</script>
+</body>
+</html>
