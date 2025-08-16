@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloom Valley Nursery - Sales and Events</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header">
+<img src="Client1_LogoPalette2_F0C06D.png" alt="Logo" class="logo">
+<div class="header-text">Bloom Valley Nursery</div>
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About Us</a>
+<a href="sales.html">Sales and Events</a>
+</div>
+</div>
+</div>
+<div class="content">
+<h1>Sales and Events</h1>
+<p>Check out our featured products and upcoming events.</p>
+<div class="sales-events-grid">
+<div class="event-item">
+<img src="Client1_WateringCan.png" alt="Watering Can">
+<div class="event-info">
+<div class="event-badge sale-badge">ON SALE</div>
+<div class="event-title">Premium Watering Can</div>
+<div class="event-date">Sale ends August 31st, 2025</div>
+<div class="event-description">Professional grade copper watering can with ergonomic handle. Perfect for indoor plants and small gardens. Limited time offer!</div>
+<div class="event-price">$24.99 <span style="text-decoration: line-through; color: #96BAA0; font-size: 14px;">$34.99</span></div>
+</div>
+</div>
+<div class="event-item">
+<img src="Client1_BirdHouse.png" alt="Bird House">
+<div class="event-info">
+<div class="event-badge current-event-badge">CURRENT EVENT</div>
+<div class="event-title">Build-A-Birdhouse Workshop</div>
+<div class="event-date">August 17th, 2025 | 10:00 AM - 2:00 PM</div>
+<div class="event-description">Join us for a fun family workshop where you'll build and decorate your own birdhouse! All materials and tools provided. Light lunch included.</div>
+<div class="event-price">$35.00 per person</div>
+</div>
+</div>
+<div class="event-item">
+<img src="Client1_PottingSoil.png" alt="Potting Soil">
+<div class="event-info">
+<div class="event-badge past-event-badge">PAST EVENT</div>
+<div class="event-title">Premium Soil Launch Event</div>
+<div class="event-date">July 15th, 2025</div>
+<div class="event-description">Thank you to everyone who attended our premium potting soil launch! We had over 150 gardening enthusiasts learn about soil composition and repotting techniques.</div>
+<div class="event-price">Event Completed</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<p>&copy; 2025 Bloom Valley Nursery. All rights reserved.</p>
+<div class="newsletter-section">
+<h3>Subscribe to Our Newsletter</h3>
+<form id="newsletter-form" novalidate>
+<input type="email" id="newsletter-email" placeholder="Enter your email">
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
